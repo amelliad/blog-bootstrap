@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Artikel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .blog-card {
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-title {
+            color: #007bff;
+        }
+
+        .btn-share {
+            background-color: #f06292;
+            color: white;
+        }
+
+        .btn-share:hover {
+            background-color: #ec407a;
+        }
+
+        .gradient-button {
+            background: linear-gradient(to right, #42a5f5, #f48fb1);
+            color: white;
+        }
+
+        .comment-box textarea {
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Blog List Page (2 columns) -->
+    <div class="container py-5">
+        <h1 class="mb-4 text-center blog-title">Daftar Blog</h1>
+        <div class="row g-4">
+            <!-- Blog Item -->
+            <div class="col-md-6">
+                <div class="card blog-card">
+                    <img src="https://via.placeholder.com/600x300" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Judul Artikel 1</h5>
+                        <p class="card-text">Ini adalah ringkasan singkat dari artikel blog. Klik untuk membaca selengkapnya.</p>
+                        <a href="#artikel" class="btn gradient-button">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat -->
+            <div class="col-md-6">
+                <div class="card blog-card">
+                    <img src="https://via.placeholder.com/600x300" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Judul Artikel 2</h5>
+                        <p class="card-text">Ringkasan artikel lain di sini. Bisa ditambah lebih banyak.</p>
+                        <a href="#artikel" class="btn gradient-button">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Artikel Detail Page (1 column) -->
+    <div id="artikel" class="container py-5">
+        <h1 class="blog-title mb-3">Judul Artikel Lengkap</h1>
+        <p class="text-muted">Diposting pada 30 April 2025</p>
+        <img src="https://via.placeholder.com/800x400" class="img-fluid mb-4 rounded" alt="">
+        <p>Ini adalah isi lengkap dari artikel. Kamu bisa menuliskan konten selengkapnya di sini, baik paragraf maupun gambar atau kutipan.</p>
+
+        <div class="my-4">
+            <button class="btn btn-share me-2">🔗 Share</button>
+            <a href="#" class="btn btn-outline-primary">← Artikel Sebelumnya</a>
+            <a href="#" class="btn btn-outline-primary">Artikel Selanjutnya →</a>
+        </div>
+
+        <h4 class="mt-5">Rekomendasi Artikel Lainnya</h4>
+        <ul>
+            <li><a href="#">Judul Artikel Rekomendasi 1</a></li>
+            <li><a href="#">Judul Artikel Rekomendasi 2</a></li>
+        </ul>
+
+        <h4 class="mt-5">Komentar</h4>
+        <div class="mb-3">
+            <strong>Ani:</strong>
+            <p>Sangat informatif, terima kasih!</p>
+        </div>
+
+        <div class="comment-box mt-4">
+            <h5>Tinggalkan Komentar</h5>
+            <form>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Nama Anda">
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Email Anda">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" rows="4" placeholder="Tulis komentar..."></textarea>
+                </div>
+                <button type="submit" class="btn gradient-button">Kirim Komentar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
